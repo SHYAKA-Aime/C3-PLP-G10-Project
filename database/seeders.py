@@ -15,7 +15,7 @@ def seed_data():
     db.commit()
     cursor.close()
     db.close()
-    print("✅ Sample job data inserted!")
+    print(" Sample job data inserted!")
 
 if __name__ == "__main__":
     seed_data()
