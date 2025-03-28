@@ -56,7 +56,7 @@ def install_dependencies():
 
 def main():
     print("Setting up Career Pathfinder App...\n")
-    db_username = input("Enter your MySQL username: ")
+    db_username = input("Enter your MySQL username or just enter (root) which is the default: ")
     db_password = getpass.getpass("Enter your MySQL password: ")
     database_name = "career_pathfinder"
     sql_file = "db/career_pathfinder.sql"
@@ -73,12 +73,12 @@ def main():
         update_database_py(db_username, db_password)
         install_dependencies()
         
-        start_now = input("Would you like to start the app now? (Y/N): ").strip().lower()
+        start_now = input("Would you like to start the app now? (Y/N) or start it manually by runnning python3 run.py: ").strip().lower()
         if start_now == "y":
             print("Starting the app...")
             subprocess.run("python3 run.py", shell=True)
         else:
-            print("Setup complete. You can start the app manually using 'python run.py'.")
+            print("Setup complete. You can start the app manually using 'python3 run.py'.")
     else:
         print("Failed to connect to MySQL. Please check your credentials and try again.")
 

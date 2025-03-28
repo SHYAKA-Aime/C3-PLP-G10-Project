@@ -3,7 +3,7 @@
 First Clone the repository and navigate to project Folder
 
 ```sh
-git clone <link>
+git clone https://github.com/SHYAKA-Aime/C3-PLP-G10-Project.git
 ```
 
 1. Ensure you have MySQL installed.
